@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+   .container{
+       
+       margin: 70px;
+       
+   }
+   .a{
+       margin: 4px;
+   }
+   #st{
+       margin: 12px;
+   }
+   sup{
+       color: red;
+   }
+   form{
+       margin: 25px;
+   }
+   .rate {
+    float: left;
+    height: 46px;
+    
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+#po{
+    
+    position: relative;
+    top: 20px;
+    
+}
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="border">
+        <form action="">
+            
+            <div class="row">
+            <div class="col-fluid-4 ">
+                <div class="a">
+                <div><label for="name"><b> Name <sup>*</sup></b></label><br>
+                    <input type="text" required><br><p>First</p></div>
+                   
+                </div>
+                
+                
+            </div>
+            <div class="col-fluid-4 ">
+                <div class="a" id="st"> <br>
+                <input type="text"required><br><p>Last
+                </p>     
+            </div>            
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-fluid-6">
+                <label for="email"><b>
+                    email </b> <sup>*</sup>
+                </label><br><input type="text" required style= "width:402px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-fluid-4">
+                <div class="a" id="po"><label for="star"><b>Your Experience</b><sup>*</sup></label></div>
+                
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-fluid-4">
+                <div class="rate">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label for="star5" title="text">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label for="star4" title="text">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label for="star3" title="text">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label for="star2" title="text">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                    <label for="star1" title="text">1 star</label>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-fluid-6">
+                <p>Overall,how would you rate you experience with us?</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-fluid-6">
+                <label for="radio"><b>How satisfied are you with <sup>*</sup></b></label>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td scope="col"> </td>
+                    <td scope="col"> Very Unsatisfied</td>
+                    <td scope="col"> Unsatisfied</td>
+                    <td scope="col"> Neutral</td>
+                    <td scope="col"> Satisfied</td>
+                    <td scope="col"> Very Satisfied</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>purchase</td>
+                    <td><input type="radio" name="er" id=""></td>
+                    <td><input type="radio" name="er" id=""></td>
+                    <td><input type="radio" name="er" id=""></td>
+                    <td><input type="radio" name="er" id=""></td>
+                    <td><input type="radio" name="er" id=""></td>
+                </tr>
+                <tr>
+                    <td>Service</td>
+                    <td><input type="radio" name="er1" id=""></td>
+                    <td><input type="radio" name="er1" id=""></td>
+                    <td><input type="radio" name="er1" id=""></td>
+                    <td><input type="radio" name="er1" id=""></td>
+                    <td><input type="radio" name="e1r" id=""></td>
+                </tr>
+                <tr>
+                    <td>Company Overall</td>
+                    <td><input type="radio" name="er2" id=""></td>
+                    <td><input type="radio" name="er2" id=""></td>
+                    <td><input type="radio" name="er2" id=""></td>
+                    <td><input type="radio" name="er2" id=""></td>
+                    <td><input type="radio" name="er2" id=""></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+           <div class="col-fluid-4">
+               <label for="radio2"><b>How likeky are you to</b><sup>*</sup></label>
+           </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td scope="col"> </td>
+                    <td scope="col"> Very unlikely</td>
+                    <td scope="col">unlikely </td>
+                    <td scope="col"> Neutral</td>
+                    <td scope="col">likely</td>
+                    <td scope="col"> Very likely</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Buy from us again</td>
+                    <td><input type="radio" name="er4" id=""></td>
+                    <td><input type="radio" name="er4" id=""></td>
+                    <td><input type="radio" name="er4" id=""></td>
+                    <td><input type="radio" name="er4" id=""></td>
+                    <td><input type="radio" name="er4" id=""></td>
+                </tr>
+                <tr>
+                    <td>Recommend our <br> product to others</td>
+                    <td><input type="radio" name="er3" id=""></td>
+                    <td><input type="radio" name="er3" id=""></td>
+                    <td><input type="radio" name="er3" id=""></td>
+                    <td><input type="radio" name="er3" id=""></td>
+                    <td><input type="radio" name="er3" id=""></td>
+                </tr>
+                <tr>
+                    <td>Recommend our <br> company to others</td>
+                    <td><input type="radio" name="er5" id=""></td>
+                    <td><input type="radio" name="er5" id=""></td>
+                    <td><input type="radio" name="er5" id=""></td>
+                    <td><input type="radio" name="er5" id=""></td>
+                    <td><input type="radio" name="er5" id=""></td>
+                </tr>
+            </tbody>
+        </table>
+                
+        <div class="row">
+            <div class="col-fluid-12">
+                <label for="text"><b>Additional comments or suggestions</b></label><br>
+                <div class="mb-3">
+                    <label for="validationTextarea">Textarea</label>
+                    <textarea class="form-control " id="validationTextarea" rows="3" cols="160"></textarea>
+                    
+                  </div>
+            </div>
+        </div>
+        <button>submit</button>
+
+        </form>
+    </div>
+    </div>
+</body>
+</html>
